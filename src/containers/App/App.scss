@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-image: url('../../assets/imgs/background_2.png');
+  background-size: cover;
   width: 100%
 }
 
@@ -22,4 +23,10 @@
 
 .App-intro {
   font-size: large;
+}
+
+.blk{
+  background-color: black;
+  height: 150px;
+  width: 100%;
 }

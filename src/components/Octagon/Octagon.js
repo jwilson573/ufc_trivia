@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Octagon.css';
+import classes from './Octagon.scss';
 import octagon_img from '../../assets/imgs/octagon.png';
 const octagon = (props) => {
     return (

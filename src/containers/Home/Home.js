@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classes from './Home.scss';
-import Aux from '../../hocs/Aux';
 
 class Home extends Component {
     state = {
@@ -10,11 +9,11 @@ class Home extends Component {
     }
     render () {
         return (
-            <Aux>
+            <div>
                 <div className={classes.Home}>
                     <h1>Game Mode Placeholder</h1>
                 </div>
-            </Aux>
+            </div>
 
         )
 

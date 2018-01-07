@@ -1,32 +1,8 @@
+@import '../../styles/_colors';
+
 .App {
   text-align: center;
   background-image: url('../../assets/imgs/background_2.png');
   background-size: cover;
   width: 100%
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.blk{
-  background-color: black;
-  height: 150px;
-  width: 100%;
 }

@@ -1,7 +1,9 @@
+@import '../../styles/_colors';
+
 .Header{
     width: 100%;
     height: 95px;
-    background-color: #171717;
+    background-color: $black;
     margin-bottom: 1%;
 }
 .Logo{

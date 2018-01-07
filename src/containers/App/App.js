@@ -9,6 +9,11 @@ import events from '../../state/events';
 import API from '../../api';
 import classes from './App.scss';
 
+import { BrowserRouter, Route } from 'react-router-dom';
+
+//Pages
+import Home from '../Home/Home';
+
 class App extends Component {
   componentDidMount() {
    // Pre-load data
@@ -41,10 +46,14 @@ class App extends Component {
   }
   render() {
     return (
-      <div className={classes.App}>
-        <Header  />
-        <Octagon />
-      </div>
+      <BrowserRouter>
+        <div className={classes.App}>
+          <Header  />
+          {/* <Octagon /> */}
+          <Route path="/" exact component={Home}/>
+          <Route path="/new-game" exact component={Octagon} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

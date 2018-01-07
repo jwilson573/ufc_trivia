@@ -10,11 +10,38 @@
     
 }
 
-@media (max-width: 500px) {
+// @media (max-width: 500px) {
+//     .Octagon{
+//         width: 450px;
+//     }
+//     .Div{
+//         width: 100%;
+//     }
+// }
+
+//iPhone 7
+@media only screen and (min-width : 320px) and (max-width : 375px) {
     .Octagon{
-        width: 450px;
+        width: 350px;
+        margin-left: -42px;
+        margin-top: 50%;
     }
-    .Div{
-        width: 100%;
+
+}
+
+//iPhone 7+
+@media only screen and (min-width : 414px) and (max-width : 667px) {
+    .Octagon{
+        width: 375px;
+        margin-left: -42px;
+        margin-top: 50%;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .Octagon{
+        margin-top: 2%;
+        width: 350px;
+
     }
 }

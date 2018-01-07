@@ -12,7 +12,7 @@ class Home extends Component {
         return (
             <Aux>
                 <div className={classes.Home}>
-                    <h1>Game Mode Placeholder</h1>
+                    <h1>Splash Screen Placeholder</h1>
                 </div>
             </Aux>
 

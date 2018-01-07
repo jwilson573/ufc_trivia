@@ -51,6 +51,7 @@ class App extends Component {
           <Header  />
           {/* <Octagon /> */}
           <Route path="/" exact component={Home}/>
+          <Route path="/leaderboards" exact component={Home} />
           <Route path="/new-game" exact component={Octagon} />
         </div>
       </BrowserRouter>

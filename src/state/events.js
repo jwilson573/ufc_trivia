@@ -3,7 +3,9 @@ const events = {
     setData: data => {
         events.data = data;
     },
-    get: () => events.data
+    getAll: () => events.data
 };
 
 export default events;
+
+// Todo: Add a date search by year

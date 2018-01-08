@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import Octagon from '../../components/Octagon/Octagon';
-import Header from '../../components/Header/Header';
 import fighters from '../../state/fighters';
 import events from '../../state/events';
 
 import API from '../../api';
 import classes from './App.scss';
 
-import { BrowserRouter, Route } from 'react-router-dom';
-
 //Pages
+import Header from '../../components/Header/Header';
 import Home from '../Home/Home';
+
 
 class App extends Component {
   componentDidMount() {
@@ -49,9 +48,7 @@ class App extends Component {
       <BrowserRouter>
         <div className={classes.App}>
           <Header  />
-          {/* <Octagon /> */}
           <Route path="/" exact component={Home}/>
-          <Route path="/new-game" exact component={Octagon} />
         </div>
       </BrowserRouter>
     );

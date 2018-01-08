@@ -9,10 +9,9 @@ const header = (props) => {
         <div className={classes.Header}>
             <img className={classes.Logo} src={logo} alt="ufc_trivia.png" />
             <ul>                
-                <li><Link to="/new-game">New Game</Link></li>
+                <li><Link to="/">New Game</Link></li>
                 <li><Link to="/leaderboards">Leaderboards</Link></li>
             </ul>
-            <Link className="tap" to="/">Tap Out</Link>
         </div>
     )
 }

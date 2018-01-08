@@ -12,7 +12,7 @@ const header = (props) => {
                 <li><Link to="/new-game">New Game</Link></li>
                 <li><Link to="/leaderboards">Leaderboards</Link></li>
             </ul>
-            <Link class="tap" to="/">Tap Out</Link>
+            <Link className="tap" to="/">Tap Out</Link>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 const game = {
     weightclasses: [],
-    setWeightclass: weightclasses => {
+    setWeightclasses: weightclasses => {
         game.weightclasses = weightclasses;
     },
     getWeightclasses: () => game.weightclasses

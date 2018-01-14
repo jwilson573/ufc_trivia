@@ -3,7 +3,6 @@ import { Button } from 'semantic-ui-react';
 import classes from './Home.scss';
 
 import GameMode from '../../components/GameMode/GameMode'
-
 import AuxComponent from '../../hocs/AuxComponent';
 
 class Home extends Component {
@@ -17,9 +16,7 @@ class Home extends Component {
                     <GameMode gameMode="Survival" history={this.props.history} />
                 </div>
             </AuxComponent>
-
         )
-
     }
 }
 

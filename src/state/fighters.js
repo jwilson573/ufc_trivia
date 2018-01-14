@@ -13,8 +13,13 @@ const fighters = {
                 && last_name.toLowerCase() === names[1].toLowerCase();
         });
     },
-    getWeightclass: weightclass => {
-        return fighters.data.filter( fighter => fighter.weight_class === weightclass.replace(' ', '_') );
+    getWeightclass: weightclasses => {
+        return fighters.data.filter( fighter => {
+            weightclasses = weightclasses.map( weightclass => {
+                return weightclass.replace(' ', '_');
+            });
+            return _.includes(weightclasses, fighter.weight_class );
+        });
     }
 };
 

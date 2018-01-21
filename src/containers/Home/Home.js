@@ -21,7 +21,7 @@ class Home extends Component {
                             <GameMode gameMode="Survival" history={this.props.history} />
     
                     </div>
-                    <img className={classes.Mcgregor}src={logo} alt="mcgregor" />
+                    <img className={[classes.Mcgregor, classes.slideInRight].join(' ')} src={logo} alt="mcgregor" />
                 </div>
             </AuxComponent>
         )

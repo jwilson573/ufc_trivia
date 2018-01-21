@@ -1,9 +1,14 @@
+@import '../../styles/_colors';
 .Btn_bg{
     width: 100%;
+    cursor: pointer;
     // position: relative;
     border-style: solid;
-    border-color: red transparent transparent transparent !important;
+    border-color: $light-red transparent transparent transparent !important;
     border-width: 75px 75px 0 0 !important;
+    &:hover {
+        border-color: $dark-red transparent transparent transparent !important;
+    }
 
 }
 .Btn_txt{

@@ -29,8 +29,23 @@
 }
 .Mcgregor{
     position: fixed;
-    top: 10px;
+    bottom: 0px;
     right: 30px;
-    width: 60%;
+    height: 100%;
     opacity: 1.0;
+}
+.slideInRight {
+    animation: slide-in-right 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-right {
+    0% {
+        right: -100px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        right: 30px;
+    }
 }

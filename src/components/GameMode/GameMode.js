@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
+import classes from './GameMode.scss';
 import game from '../../state/game';
 
 export default class GameMode extends React.Component {
@@ -25,7 +26,9 @@ export default class GameMode extends React.Component {
     render() {
         return (
             <div>
-                <Button color="red" size="massive">{this.props.gameMode}</Button>
+                <button className={classes.Btn_bg}>
+                    <div className={classes.Btn_txt}>{this.props.gameMode}</div>                    
+                </button>
                 { /* 
                     Accordion with list of checkboxes. Each checkboxes
                     should have an onChange={this.handleSelect.bind(this, weightclass)}

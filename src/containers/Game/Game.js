@@ -4,10 +4,10 @@ import game from '../../state/game';
 import fighters from '../../state/fighters';
 
 import Classic from '../../components/Classic/Classic';
+import Weightclasses from '../../components/GameMode/Weightclasses/Weightclasses';
 
 export default class Game extends React.Component {
     state = {
-        gameMode: '',
         fighters: [],
         questions: []
     }
@@ -19,7 +19,7 @@ export default class Game extends React.Component {
 
         const fightersByWeightclass = fighters.getWeightclass(game.getWeightclasses());
         this.setState({
-            gameMode,
+            
             fighters: fightersByWeightclass
         });
     }
@@ -28,7 +28,7 @@ export default class Game extends React.Component {
             <div>
                 <Switch>
                     <Route path="/play/classic" render={props => <Classic {...props} {...this.state} /> }  />
-                    {/*<Route path="/play/timed" render={props => <Timed {...props} {...this.state} /> }  />*/}
+                    {/* <Route path="/select_weightclass" exact render={props => <Weightclasses {...props} {...this.state} /> }  /> */}
                     {/*<Route path="/play/survival" render={props => <Survival {...props} {...this.state} /> }  />*/}
                 </Switch>
             </div>

@@ -8,18 +8,35 @@ import GameMode from '../../components/GameMode/GameMode'
 import AuxComponent from '../../hocs/AuxComponent';
 
 class Home extends Component {
+
+    state = {
+        submitted: false,
+        selected: false,
+        modes: ['Classic', 'Timed', 'Survival']
+    }
+
+    buttonSelectHandler = () => {
+        this.setState((prevState) => {
+            return  { selected: !prevState.selected }
+        })
+    }
+
     render () {
+        // let gameModes = this.state.modes.map((mode, idx)  => {
+        //     return <GameMode 
+        //             key={idx}
+        //             gameMode={mode} 
+        //             history={this.props.history} 
+        //             gmIndex={idx}  />
+        // }) 
+
         return (
             <AuxComponent>
                 <div className={classes.Home}>
                     <h1>Select Game Mode</h1>
                     <div className={classes.Btn_group}>
-                            <GameMode gameMode="Classic" history={this.props.history} />
-                       
-                            <GameMode gameMode="Timed" history={this.props.history} />
-                   
-                            <GameMode gameMode="Survival" history={this.props.history} />
-    
+                        <GameMode 
+                        history={this.props.history}  />
                     </div>
                     <img className={[classes.Mcgregor, classes.slideInRight].join(' ')} src={logo} alt="mcgregor" />
                 </div>

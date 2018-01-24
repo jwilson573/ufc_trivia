@@ -1,40 +1,50 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
 import classes from './GameMode.scss';
 import game from '../../state/game';
 
 export default class GameMode extends React.Component {
     state = {
-        weightclasses: []
+        selected: false,
+        modes: ['Classic', 'Timed', 'Survival'],
+        selectedMode: ''
     }
-    handleSelect = e => {
-        let weightclasses = [...this.state.weightclasses];
-        if(e.target.checked) {
-            // Add weightclass
-            weightclasses.push([e.target.value]);
-        }else {
-            // remove weightclass
-        }
-        this.setState({
-            weightclasses 
-        });
-    }
-    handleReady = () => {
-        game.setWeightclass(this.state.weightclasses);
-        this.props.history.push(`/${this.props.gameMode.toLowerCase()}`);
-    }
-    render() {
-        return (
-            <div>
-                <button className={classes.Btn_bg}>
-                    <div className={classes.Btn_txt}>{this.props.gameMode}</div>                    
-                </button>
-                { /* 
-                    Accordion with list of checkboxes. Each checkboxes
-                    should have an onChange={this.handleSelect.bind(this, weightclass)}
-                */}
 
-            </div>
-        )
+    buttonSelectHandler = mode => {
+        this.setState((prevState) => {
+            return  { 
+                selected: !prevState.selected,
+                selectedMode: mode
+            }
+        })
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if(this.state.selected){
+            setTimeout(() => {
+                this.props.history.push(`/play/${this.state.selectedMode.toLowerCase()}`);
+            }, 1000);
+        }
+    }
+
+    render() {
+
+            return(
+                <div>
+                    {this.state.modes.map((mode, idx) => {
+                        const names = this.state.selected ? [classes.Btn_bg, classes[`slideLeft${idx}`]].join(' ') : classes.Btn_bg;
+                        return (
+                            <button onClick={() => this.buttonSelectHandler(mode)} className={names} >
+                                <div className={classes.Btn_txt}>{mode}</div>                    
+                            </button>
+                        )
+                    })}    
+                </div>
+
+            )
+      
+        
     }
 }

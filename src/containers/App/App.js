@@ -12,11 +12,11 @@ import classes from './App.scss';
 import Header from '../../components/Header/Header';
 import Home from '../Home/Home';
 import Game from '../Game/Game';
-
+import Weightclasses from '../../components/GameMode/Weightclasses/Weightclasses';
 
 class App extends Component {
   state = {
-    loaded: false
+    loaded: true
   };
   componentDidMount() {
    // Pre-load data
@@ -59,7 +59,8 @@ class App extends Component {
         <div className={classes.App}>
           <Header  />
           <Route path="/" exact component={Home}/>
-          <Route exact path="/play/:gameMode" component={Game}/>
+          <Route exact path="/play/:gameMode" component={Weightclasses}/>
+
         </div>
       </BrowserRouter>
     );

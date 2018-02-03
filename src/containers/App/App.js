@@ -16,7 +16,7 @@ import Weightclasses from '../../components/GameMode/Weightclasses/Weightclasses
 
 class App extends Component {
   state = {
-    loaded: true
+    loaded: false
   };
   componentDidMount() {
    // Pre-load data
@@ -60,6 +60,7 @@ class App extends Component {
           <Header  />
           <Route path="/" exact component={Home}/>
           <Route exact path="/play/:gameMode" component={Weightclasses}/>
+          <Route path="/play/:gameMode/:weightclass" component={Game} />
 
         </div>
       </BrowserRouter>

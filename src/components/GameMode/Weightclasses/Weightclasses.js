@@ -3,20 +3,22 @@ import { Link } from 'react-router-dom';
 
 import classes from './Weightclasses.scss';
 import homeClasses from '../../../containers/Home/Home.scss'
-
+import Constants from '../../../Constants';
 
 class Weightclasses extends Component{
     state = {
         selected: false,
-        weightclasses: ['all','lightweight', 'middleweight', 'welterweight', 'lightheavyweight','heavyweight']
+        
 
     }
+
+    weightclasses = Constants.weightclasses;
 
     render(){
         console.log('[Weightclasses]',this.props)
         return (
             <div className={[homeClasses.Home, homeClasses.Btn_group].join(' ')}>
-            {this.state.weightclasses.map((weightclass, idx) => {
+            {this.weightclasses.map((weightclass, idx) => {
                 const names = this.state.selected ? [classes.Btn_bg, classes[`slideLeft${idx}`]].join(' ') : classes.Btn_bg;
                 
                 return (

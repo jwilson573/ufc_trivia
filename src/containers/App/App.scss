@@ -2,11 +2,15 @@
 
 .App {
   text-align: center;
-  background-image: url('../../assets/imgs/background_3_v5.png');
-  background-size: cover;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   font-family: 'Racing Sans One', 'Arial';
 }
 
+body{
+  background-image: url('../../assets/imgs/background_3_v5.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}

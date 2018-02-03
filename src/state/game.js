@@ -1,9 +1,7 @@
 const game = {
-    weightclasses: [],
-    setWeightclasses: weightclasses => {
-        game.weightclasses = weightclasses;
-    },
-    getWeightclasses: () => game.weightclasses
+    score: 0,
+    questions: [],
+    
 };
 
 export default game;

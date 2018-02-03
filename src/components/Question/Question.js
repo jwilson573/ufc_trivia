@@ -1,6 +1,12 @@
 import React from 'react';
 
 export default class Question extends React.Component {
+
+    state = {
+        correctAnswer: 20,
+        incorrectAnswer: 10
+    }
+
     render() {
         console.log(`Question ${this.props.index}: `, this.props);
         return (

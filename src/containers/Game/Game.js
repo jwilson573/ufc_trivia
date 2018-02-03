@@ -2,35 +2,30 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import game from '../../state/game';
 import fighters from '../../state/fighters';
+import classes from './Game.scss';
 
-import Classic from '../../components/Classic/Classic';
-import Weightclasses from '../../components/GameMode/Weightclasses/Weightclasses';
+import Questions from '../Questions/Questions';
+
 
 export default class Game extends React.Component {
     state = {
-        fighters: [],
-        questions: []
+        fighters: []
     }
+
     componentDidMount() {
-        const { gameMode } = this.props.match.params;
+        const { gameMode, weightclass } = this.props.match.params;
+        
         // This should already be set on the HOME page
         // For testing
-        game.setWeightclasses(['Welterweight', 'Lightweight', 'Heavyweight']);
-
-        const fightersByWeightclass = fighters.getWeightclass(game.getWeightclasses());
-        this.setState({
-            
-            fighters: fightersByWeightclass
-        });
+        const fightersByWeightclass = fighters.getWeightclass(weightclass);
+        console.log(fightersByWeightclass);
+        this.setState({ fighters: fightersByWeightclass });
     }
     render() {
         return (
             <div>
-                <Switch>
-                    <Route path="/play/classic" render={props => <Classic {...props} {...this.state} /> }  />
-                    {/* <Route path="/select_weightclass" exact render={props => <Weightclasses {...props} {...this.state} /> }  /> */}
-                    {/*<Route path="/play/survival" render={props => <Survival {...props} {...this.state} /> }  />*/}
-                </Switch>
+                {/* <TestPics fighters={this.state.fighters}/> */}
+                <Questions fighters={this.state.fighters} />
             </div>
         )
     }
@@ -51,3 +46,17 @@ export default class Game extends React.Component {
     correct: true|false
 }		
 */
+
+
+// class TestPics extends React.Component {
+//     render() {
+//         console.log("[TestPics]", this.props);
+//         return (
+//             this.props.fighters.map((fighter, i) => (
+//                 <img key={i} src={fighter.profile_image} alt={fighter.first_name} className={classes.fighterPics} />
+//             ))    
+
+//         )
+
+//     }
+// }

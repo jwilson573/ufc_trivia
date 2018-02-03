@@ -29,7 +29,7 @@ const Constants = {
         default: "http://ufc-data-api.ufc.com/api/v3/iphone/1",
         alt: "http://ufc-data-api.ufc.com/api/v1/us"
     },
-    weightclasses: ['Lightweight'],
+    weightclasses: ['all','flyweight','bantam_weight','lightweight', 'middleweight', 'welterweight', 'light_heavyweight','heavyweight'],
     questionTypes
 };
 

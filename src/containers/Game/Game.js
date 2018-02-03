@@ -18,14 +18,18 @@ export default class Game extends React.Component {
         // This should already be set on the HOME page
         // For testing
         const fightersByWeightclass = fighters.getWeightclass(weightclass);
-        console.log(fightersByWeightclass);
+        // console.log(fightersByWeightclass);
         this.setState({ fighters: fightersByWeightclass });
     }
     render() {
+        const { gameMode } = this.props.match.params;
         return (
             <div>
                 {/* <TestPics fighters={this.state.fighters}/> */}
-                <Questions fighters={this.state.fighters} />
+                <Questions 
+                    fighters={this.state.fighters} 
+                    gameMode={gameMode}
+                />
             </div>
         )
     }

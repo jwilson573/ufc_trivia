@@ -2,11 +2,11 @@ const questionTypes = [
     { 
         type: "multiple",
         templates: [{
-            question: "What is FIGHTER_NAME's win record?",
-            answer: "WINS"
+            question: "What is {first_name} {last_name}'s win record?",
+            answer: "wins"
         },{
-            question: "How many losses does FIGHTER_NAME have?",
-            answer: "LOSSES"
+            question: "How many losses does {first_name} {last_name} have?",
+            answer: "losses"
         }],
     },
 

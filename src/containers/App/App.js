@@ -38,16 +38,16 @@ class App extends Component {
         this.setState({
           loaded: true
         });
-        console.log('Data loaded')
+        // console.log('Data loaded')
         // You can now import ../../state/fighters and ../../state/events
         // into your component and use it to search for fighters.
         //Examples:
         // Get a fighter by their full name
-        console.log('Fighter: ', fighters.getFighter('Jon Jones'))
+        // console.log('Fighter: ', fighters.getFighter('Jon Jones'))
         // Get all fighters by weightclass
         // console.log('Light Heavyweights: ', fighters.getWeightclass('Light Heavyweight'));
         // You can also get all events
-        console.log('Events: ', events.getAll());
+        // console.log('Events: ', events.getAll());
       });
   }
   render() {

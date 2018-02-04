@@ -121,6 +121,7 @@ class Questions extends Component {
         return (
             <div style={{ background: '#FFF'}}>
                 Questions Component
+                <button onClick={() => this.generateQuestionData(this.props)}>Generate Questions</button>
                 {this.renderQuestions()}
             </div>
         )
